@@ -10,6 +10,7 @@
 
 <body>
     <a-scene>
+        <!--Run with python3 -m http.server-->
         <!-- <a-sky color="#000"></a-sky>
         <a-sphere id="sphere1" position="0 1.25 -5" radius="1.25" color="#36ff79"></a-sphere> -->
 
@@ -22,20 +23,31 @@
         <a-scene>
             <a-assets>
                 <!--Load textures for surfaces here-->
-                <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-                <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-                <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+                <img id="boxTexture" src="crystal.jpg">
+                <img id="skyTexture" src="title-screen.jpg">
+                <img id="groundTexture" src="grass.jpg">
+                <img id="obbyTexture" src="crying-obby.jpg">
             </a-assets>
+            <!--Cursor-->
+            <!-- <a-camera>
+                <a-cursor color="red"></a-cursor>
+            </a-camera> -->
             <!--Terrain elements-->
             <a-sky src="#skyTexture"></a-sky>
-            <a-plane src="#groundTexture" id="ground" rotation="-90 0 0" width="30" height="30"></a-plane>
-            <a-box id="box1" src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
-            <a-box id="box2" src="#boxTexture" position="0 4 -4" rotation="0 45 45" scale="2 2 2"></a-box>
-            <a-box id="box3" src="#boxTexture" position="0 -3 3" rotation="0 45 45" scale="2 2 2"></a-box>
+            <a-plane src="#groundTexture" id="ground" rotation="-90 0 0" width="20" height="5"></a-plane>
+            <a-box id="box1" src="#boxTexture" position="0 3 -5" rotation="0 45 45" scale="2 2 2"
+                animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
+            <a-box id="box2" src="#boxTexture" position="0 3 -5" rotation="45 45 45" scale="2 2 2"
+                animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
+            
+            <a-box id="obby" src="#obbyTexture" position="0 0 -5" rotation="0 0 0"
+                scale="2 2 2"></a-box>
+
+            <a-light type="ambient" color="#445451"></a-light>
         </a-scene>
 
-        <a-entity text="value: Hello, Virtual Reality!; color: #BBB" position="-0.9 0.2 -3"
-            scale="1.5 1.5 1.5"></a-entity>
+        <!-- <a-entity text="value: Hello, Virtual Reality!; color: #BBB" position="-0.9 0.2 -3"
+            scale="1.5 1.5 1.5"></a-entity> -->
     </a-scene>
 </body>
 
