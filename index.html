@@ -24,8 +24,11 @@
                 <!--Load textures for surfaces here-->
                 <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
                 <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+                <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
             </a-assets>
+            <!--Terrain elements-->
             <a-sky src="#skyTexture"></a-sky>
+            <a-plane src="#groundTexture" id="ground" rotation="-90 0 0" width="30" height="30"></a-plane>
             <a-box id="box1" src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
             <a-box id="box2" src="#boxTexture" position="0 4 -4" rotation="0 45 45" scale="2 2 2"></a-box>
             <a-box id="box3" src="#boxTexture" position="0 -3 3" rotation="0 45 45" scale="2 2 2"></a-box>
